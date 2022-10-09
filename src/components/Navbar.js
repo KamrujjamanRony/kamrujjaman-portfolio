@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ( {children} ) => {
   return (
     <div className="drawer drawer-end">
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
@@ -27,23 +28,42 @@ const Navbar = () => {
           <div className="flex-none hidden lg:block">
             <ul className="menu menu-horizontal">
               <li>
-                <a>Navbar Item 1</a>
+                <Link to="/" className="rounded-lg">Home</Link>
               </li>
               <li>
-                <a>Navbar Item 2</a>
+                <Link to="/services" className="rounded-lg">Services</Link>
+              </li>
+              <li>
+                <Link to="/portfolio" className="rounded-lg">Portfolio</Link>
+              </li>
+              <li>
+                <Link to="/about" className="rounded-lg">About Me</Link>
+              </li>
+              <li>
+                <Link to="/contact" className="rounded-lg">Contact Me</Link>
               </li>
             </ul>
           </div>
         </div>
+        {children}
       </div>
       <div className="drawer-side">
         <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
         <ul className="menu p-4 overflow-y-auto w-80 bg-base-100">
           <li>
-            <a>Sidebar Item 1</a>
+            <Link to="/" className="rounded-lg">Home</Link>
           </li>
           <li>
-            <a>Sidebar Item 2</a>
+            <Link to="/services" className="rounded-lg">Services</Link>
+          </li>
+          <li>
+            <Link to="/portfolio" className="rounded-lg">Portfolio</Link>
+          </li>
+          <li>
+            <Link to="/about" className="rounded-lg">About Me</Link>
+          </li>
+          <li>
+            <Link to="/contact" className="rounded-lg">Contact Me</Link>
           </li>
         </ul>
       </div>
